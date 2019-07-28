@@ -33,6 +33,7 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    font-size: 16px;
   }
 
   ul {

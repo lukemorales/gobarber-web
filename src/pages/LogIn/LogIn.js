@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '@/assets/img/gobarber_logo.svg';
 
-export default function SignUp() {
+export default function LogIn() {
   return (
     <>
       <h1>
@@ -11,11 +11,10 @@ export default function SignUp() {
       </h1>
 
       <form>
-        <input placeholder="Your name" />
         <input type="email" placeholder="Your e-mail" />
         <input type="password" placeholder="Your password" />
-        <button type="submit">Create Account</button>
-        <Link to="/">I already have an account</Link>
+        <button type="submit">Log In</button>
+        <Link to="/signup">Sign Up</Link>
       </form>
     </>
   );
