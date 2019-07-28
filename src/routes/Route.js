@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
+import AuthLayout from '../pages/_layouts/AuthLayout';
+import DefaultLayout from '../pages/_layouts/DefaultLayout';
+
 export default function RouteWrapper({ component: Component, isPrivate, ...rest }) {
-  const signed = false;
+  const signed = true;
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
@@ -13,10 +16,18 @@ export default function RouteWrapper({ component: Component, isPrivate, ...rest 
     return <Redirect to="/dashboard" />;
   }
 
+  const Layout = signed ? DefaultLayout : AuthLayout;
+
   return (
     <>
-      <Route {...rest} component={Component} />
-      <Route {...rest} component={Component} />
+      <Route
+        {...rest}
+        render={props => (
+          <Layout>
+            <Component {...props} />
+          </Layout>
+        )}
+      />
     </>
   );
 }
