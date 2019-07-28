@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
-import AuthLayout from '../pages/_layouts/AuthLayout';
-import DefaultLayout from '../pages/_layouts/DefaultLayout';
+import AuthLayout from '@/pages/_layouts/AuthLayout';
+import DefaultLayout from '@/pages/_layouts/DefaultLayout';
 
 export default function RouteWrapper({ component: Component, isPrivate, ...rest }) {
   const signed = false;
