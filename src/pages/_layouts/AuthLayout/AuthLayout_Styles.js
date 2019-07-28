@@ -32,6 +32,15 @@ export const Content = styled.div`
       }
     }
 
+    span {
+      background: #f64c75;
+      color: #6d2335;
+      padding: 4px 8px;
+      margin: -12px 0 10px;
+      border-radius: 0 0 4px 4px;
+      font-weight: bold;
+    }
+
     button {
       background: #3b9eff;
       margin: 5px 0 0;
@@ -54,42 +63,15 @@ export const Content = styled.div`
     a {
       background: none;
       color: #fff;
-      padding: 12px;
-      height: 44px;
-      margin-top: 15px;
+      margin-top: 10px;
       font-size: 16px;
       opacity: 0.7;
-      border: 1px solid #fff;
-      border-radius: 4px;
       transition: all 150ms ease-in-out;
 
       &:hover {
-        background: #fff;
         opacity: 1;
-        color: #8959c1;
       }
-
-      &:active {
-        background: #ddd;
-        border-color: #ddd;
-      }
-
-      &:nth-child(5) {
-        margin-top: 10px;
-        border: none;
-        padding: 0;
-        height: auto;
-
-        &:hover {
-          opacity: 1;
-          background: none;
-          color: #fff;
-        }
-
-        &:active {
-          background: none;
-          border-color: none;
-        }
+      
       }
     }
   }
