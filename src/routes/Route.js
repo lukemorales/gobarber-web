@@ -6,7 +6,7 @@ import AuthLayout from '../pages/_layouts/AuthLayout';
 import DefaultLayout from '../pages/_layouts/DefaultLayout';
 
 export default function RouteWrapper({ component: Component, isPrivate, ...rest }) {
-  const signed = true;
+  const signed = false;
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
