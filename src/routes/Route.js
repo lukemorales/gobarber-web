@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router-dom';
 import AuthLayout from '@/pages/_layouts/AuthLayout';
 import DefaultLayout from '@/pages/_layouts/DefaultLayout';
 
-import store from '@/store';
+import { store } from '@/store';
 
 export default function RouteWrapper({ component: Component, isPrivate, ...rest }) {
   const { signed } = store.getState().auth;
