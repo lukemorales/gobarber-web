@@ -25,9 +25,27 @@ export function* logIn({ payload }) {
 
     history.push('/dashboard');
   } catch (err) {
-    toast.error('Authentication failure. Please verify your data.');
+    toast.error('Authentication failed. Please verify your data.');
     yield put(signFailure());
   }
 }
 
-export default all([takeLatest('@auth/LOG_IN_REQUEST', logIn)]);
+export function* signUp({ payload }) {
+  try {
+    const { name, email, password } = payload;
+
+    yield call(api.post, 'users', {
+      name,
+      email,
+      password,
+      provider: true,
+    });
+
+    history.push('/');
+  } catch (err) {
+    toast.error('Registration failed. Please verify your data.');
+    yield put(signFailure());
+  }
+}
+
+export default all([takeLatest('@auth/LOG_IN_REQUEST', logIn), takeLatest('@auth/SIGN_UP_REQUEST', signUp)]);
