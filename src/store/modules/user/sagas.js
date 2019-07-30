@@ -15,7 +15,7 @@ export function* updateProfile({ payload }) {
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
-    toast.success('There was a problem updating your profile. Please verify your data');
+    toast.error('There was a problem updating your profile. Please verify your data');
 
     yield put(updateProfileFailure());
   }

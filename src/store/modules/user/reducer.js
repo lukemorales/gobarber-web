@@ -15,7 +15,6 @@ export default function user(state = INITIAL_STATE, action) {
         draft.profile = action.payload.profile;
         break;
       }
-
       default:
     }
   });
