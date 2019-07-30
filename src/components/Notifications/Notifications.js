@@ -3,7 +3,6 @@ import { MdNotifications } from 'react-icons/md';
 import { parseISO, formatDistance } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 
-import { parse } from 'path';
 import api from '@/services/api';
 
 import { Container, Badge, NotificationList, Notification, Scroll } from './Notifications_Styles';
