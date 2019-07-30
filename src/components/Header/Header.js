@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Content, Profile } from './Header_Styles';
 
 import logo from '@/assets/img/gobarber_logo_purple.svg';
+import Notifications from '../Notifications';
 
 export default function Header() {
   return (
@@ -17,6 +18,7 @@ export default function Header() {
         </nav>
 
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>Luke Morales</strong>
